@@ -1,7 +1,3 @@
-#!/usr/bin/python
-#E-bomber
-#This code for education purpose only.
-#Use it at your own risk !!!
 
 
 
@@ -17,10 +13,9 @@ passwd = getpass.getpass('Password for your above gmail/yahoo: ')
 
 
 to = raw_input('\nEmail to be bombed: ')
-#subject = raw_input('Subject: ') 
+#subject = raw_input('Subject: ')
 body = raw_input('Message for bomber: ')
 total = input('No of mail: ')
-
 if server == 'gmail':
     smtp_server = 'smtp.gmail.com'
     port = 587
@@ -34,7 +29,7 @@ else:
 print ''
 
 try:
-    server = smtplib.SMTP(smtp_server,port) 
+    server = smtplib.SMTP(smtp_server,port)
     server.ehlo()
     if smtp_server == "smtp.gmail.com":
             server.starttls()
